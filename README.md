@@ -1,2 +1,2 @@
 # dashboard
-The dashboard application
+The SWRLEdit dashoard
