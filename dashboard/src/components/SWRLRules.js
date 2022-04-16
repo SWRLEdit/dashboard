@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
-import LeftNav from './LeftNav'
 
-export default class Home extends Component {
+
+export default class SWRLRules extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      display: 'ontology'
-    }
   }
 
   render(){
     return (
       <div>
-        <LeftNav />
+        <p>SWRLRules Page</p>
     </div>
     );
   }
