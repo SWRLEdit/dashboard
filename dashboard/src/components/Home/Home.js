@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LeftNav from './LeftNav'
+import LeftNav from '../LeftNav/LeftNav'
 
 export default class Home extends Component {
 

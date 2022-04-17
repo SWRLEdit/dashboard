@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export default class Ontology extends Component {
+export default class SWRL extends Component {
 
   constructor(props) {
     super(props);
@@ -10,7 +10,7 @@ export default class Ontology extends Component {
   render(){
     return (
       <div>
-        <p>Ontology Page</p>
+        <p>SWRL Page</p>
     </div>
     );
   }
