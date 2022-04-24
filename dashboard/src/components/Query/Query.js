@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export default class Reason extends Component {
+export default class QueryPage extends Component {
 
   constructor(props) {
     super(props);
@@ -10,8 +10,7 @@ export default class Reason extends Component {
   render(){
     return (
       <div>
-        <p>Reason</p>
-        <p>Filename</p>
+        <p>Query</p>
     </div>
     );
   }

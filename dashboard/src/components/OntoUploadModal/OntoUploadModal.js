@@ -33,8 +33,8 @@ export default class OntoUploadModal extends Component {
 
         <Modal.Body>
           <label>
-            <p>SWRLEdit supports data as: </p> <p className="supported-rdf">.owl .ttl .nt .xml .jsonld</p>
-            </label>
+            <p>SWRLEdit supports data in the following formats: </p> <p className="supported-rdf">.owl .ttl .nt .xml .jsonld</p>
+          </label>
             <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)}>
               {({getRootProps, getInputProps}) => (
                 <section>

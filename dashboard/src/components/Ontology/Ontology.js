@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from "react-bootstrap";
 
 import OntoUploadModal from '../OntoUploadModal/OntoUploadModal'
+import DataTable from '../DataTable/DataTable'
 
 export default class Ontology extends Component {
 
@@ -33,11 +34,10 @@ export default class Ontology extends Component {
   render(){
     return (
       <div>
-        <p>Ontology Page</p>
-
+        <DataTable />
         { this.state.showModal ? <OntoUploadModal closeModal={this.closeOntoModal} /> : null }
       <Button className="onto-upload-btn" variant="primary" size="lg" onClick={ () => this.openOntoModal()}>
-        Upload
+        Add Data
       </Button>{' '}
     </div>
     );
