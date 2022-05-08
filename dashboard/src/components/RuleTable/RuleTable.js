@@ -7,31 +7,46 @@ export default class RuleTable extends Component {
   constructor(props) {
     super(props);
     this.removeRule = this.removeRule.bind(this);
-    this.data = [
-      {
-        id: 1,
-        Name: 'rule 1',
-        Rule: 'A(?) -> B(?)',
-      },
-      {
-        id: 2,
-        Name: 'rule 2',
-        Rule: 'B(?) -> C(?)',
-      },
-    ];
+    this.state = {
+      "data": [
+        {
+          id: 1,
+          Name: 'rule 1',
+          Rule: 'A(?) -> B(?)',
+        },
+        {
+          id: 2,
+          Name: 'rule 2',
+          Rule: 'B(?) -> C(?)',
+        }
+      ]
+    };
+  }
+
+  addNewRow(row) {
+    this.setState({
+      "data": [...this.state.data, {
+        id: this.state.data.length + 1,
+        Name: row.name,
+        Rule: row.rule
+      }]
+    });
   }
 
   /**
-   * Removes a file from the row an deletes it from the server
+   * Removes a rule from the table.
    * 
-   * @param {*} e The event fired from clicking the button. Contains the button ID
+   * @param {*} e The event fired from clicking the button. Contains the button ID.
    */
   removeRule(e) {
-    console.log("Removed rule", e.target.id);
-    this.data = this.data.filter(function (el) { return el.id != e.target.id; });
-    console.log(this.data)
-  }
+    let newRules = this.state.data.filter(function (el) { 
+      return el.id != e.target.id; 
+    })
 
+    this.setState({
+      "data": newRules
+    });
+  }
 
   render() {
     const columns = [
@@ -56,12 +71,11 @@ export default class RuleTable extends Component {
       <div>
         <DataTable
           columns={columns}
-          data={this.data}
+          data={this.state.data}
           title="SWRL Rules"
           highlightOnHover
         />
       </div>
     )
   }
-
 }

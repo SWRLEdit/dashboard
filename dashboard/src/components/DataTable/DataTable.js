@@ -7,29 +7,29 @@ export default class OntoDataTable extends Component {
   constructor(props) {
     super(props);
     this.removeFile = this.removeFile.bind(this);
-    this.data = [
-      {
-        id: 1,
-        Name: 'movies.ttl',
-        Size: '10Mb',
-      },
-      {
-        id: 2,
-        Name: 'movies.owl',
-        Size: '1Mb',
-      },
-    ];
+    this.state = {
+      "data": [
+        {
+          id: 1,
+          Name: 'movies.ttl',
+          Size: '10Mb',
+        },
+        {
+          id: 2,
+          Name: 'movies.owl',
+          Size: '1Mb',
+        },
+      ]
+    }
   }
 
   /**
    * Removes a file from the row an deletes it from the server
    * 
-   * @param {*} e The event fired from clicking the button. Contains the button ID
+   * @param {*} e The event fired from clicking the button. Contains the id of the 'x' button that was clicked (used to locate the record)
    */
   removeFile(e) {
-    console.log("Removed file", e.target.id);
-    this.data = this.data.filter(function (el) { return el.id != e.target.id; });
-    console.log(this.data)
+    this.setState({"data": this.state.data.filter(function (el) { return el.id != e.target.id; })})
   }
 
 
@@ -56,7 +56,7 @@ export default class OntoDataTable extends Component {
       <div>
         <DataTable
           columns={columns}
-          data={this.data}
+          data={this.state.data}
           title="Data"
           highlightOnHover
         />

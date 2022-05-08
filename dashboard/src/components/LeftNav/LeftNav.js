@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 
 import Ontology from '../Ontology/Ontology'
-import SWRL from '../Swrl/SWRL'
+import SWRLPage from '../SWRLPage/SWRLPage'
 import Reason from '../Reason/Reason'
 import QueryPage from '../Query/Query'
 import './LeftNav.scss'
@@ -38,7 +38,7 @@ export default class LeftNav extends Component {
                   <Ontology />
                 </Tab.Pane>
                 <Tab.Pane eventKey="swrl">
-                  <SWRL/>
+                  <SWRLPage/>
                 </Tab.Pane>
                 <Tab.Pane eventKey="reason">
                   <Reason/>

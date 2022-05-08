@@ -17,14 +17,14 @@ export default class Ontology extends Component {
   }
 
   /**
-   * Called when the user clicks the "Upload" button. Shows the ontology modal
+   * Called when the user clicks the "Upload" button. Shows the ontology modal.
    */
   openOntoModal() {
     this.setState({showModal: true})
   }
 
   /**
-   * Called when the user c
+   * Called when the user closes the data upload modal.
    */
    closeOntoModal() {
      console.log("Close called")
