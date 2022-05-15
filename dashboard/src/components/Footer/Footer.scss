@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  position: fixed;
+  width:100%;
+  bottom: 0;
+}
+
+.footer-text {
+  color: white;
+  margin-bottom: 0;
+}
+
+.footer-name {
+  padding-left: 3rem;
+}
+
+.footer-date {
+  padding-right: 3rem;
+}

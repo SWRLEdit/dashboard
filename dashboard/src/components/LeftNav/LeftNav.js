@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 
 import Ontology from '../Ontology/Ontology'
 import SWRLPage from '../SWRLPage/SWRLPage'
-import Reason from '../Reason/Reason'
+import Reason from '../Reasoning/Reasoning'
 import QueryPage from '../Query/Query'
 import './LeftNav.scss'
 

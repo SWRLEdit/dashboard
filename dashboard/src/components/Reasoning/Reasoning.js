@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LeftNav from '../LeftNav/LeftNav'
+
 
 export default class Reason extends Component {
 
@@ -10,7 +10,8 @@ export default class Reason extends Component {
   render(){
     return (
       <div>
-        <LeftNav />
+        <p>Reason</p>
+        <p>Filename</p>
     </div>
     );
   }
